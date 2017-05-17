@@ -25,7 +25,7 @@ function promisifyCall (ctx, fn) {
     return fn.apply(ctx, args)
   }
 
-  return wc(callback => {
+  return wc(function(callback){
     same
       ? args[lastIndex] = callback
       : args.push(callback)
